@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-group description="" sid="297055722490790" title="Player">
+            <sub-events>
+                <event-group description="" sid="175457626636309" title="Animations" />
+                <event-block sid="943781625234102">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="801477913615405" type="Player" />
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="812550387901873" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="443184481180980" type="Player">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="108746996886173">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="117061997350841" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="637972620673010" type="Player">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="322102019229138">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="599924944608592" type="Player" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="244327492961943" type="Player" />
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="813497061326179" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="790095155788775" type="Player">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="848864454216534">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="790060741711008" type="Gamepad">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">50</param>
+                        </condition>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="257711059817287" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="944979613168309" type="Player">
+                            <param id="0" name="Animation">&quot;Crouch&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="354420383444297" title="Movements">
+                    <sub-events>
+                        <event-block any="1" sid="739942450943101">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="302188285958490" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="372382448099983" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="465161916039402" type="Player">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="854093561699202">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="193612702491463" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="614969039973323" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">-20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="774477203931627" type="Player">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="164304930202528" type="Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="585800705736365">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="964677446084321" type="Keyboard">
+                                    <param id="0" name="Key">83 (S)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="878451432573337" type="Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="764563728891633">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="333933125847084" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="252907058209618" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">1</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">50</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="12" name="Fall through" sid="535549635038383" type="Player" />
+                                <action id="4" name="Set animation" sid="625446085728033" type="Player">
+                                    <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="572957631813714">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="817899305211501" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="5" name="Compare axis" sid="997796583425696" type="Gamepad">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">0</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="959721667785363" type="Player">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="940548610542860" type="Player">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>If the player falls off the bottom of the layout, restart the level.</comment>
+                        <event-block sid="912225902486264">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="683887307324094" type="Player">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">LayoutHeight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-26" name="Restart layout" sid="592741745707141" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
