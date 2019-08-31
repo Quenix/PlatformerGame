@@ -5,13 +5,15 @@
     <events>
         <event-group description="" sid="297055722490790" title="Player">
             <sub-events>
+                <variable constant="0" name="attackVectorX" sid="531835343309569" static="0" type="number">100</variable>
+                <variable constant="0" name="attackSpeed" sid="391384576973747" static="0" type="number">30</variable>
                 <event-group description="" sid="296323099915244" title="Controls">
                     <sub-events>
-                        <event-group description="" sid="397125327134787" title="Gamepad">
+                        <event-group description="" disabled="1" sid="397125327134787" title="Gamepad">
                             <sub-events>
-                                <event-group description="" sid="470819853468563" title="Combat">
+                                <event-group description="" disabled="1" sid="470819853468563" title="Combat">
                                     <sub-events>
-                                        <event-block sid="219759874011632">
+                                        <event-block disabled="1" sid="219759874011632">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="563576945932404" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -41,7 +43,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="664936714189073">
+                                        <event-block disabled="1" sid="664936714189073">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="489520217419734" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -64,7 +66,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="364630138820866">
+                                        <event-block disabled="1" sid="364630138820866">
                                             <conditions>
                                                 <condition id="4" name="On finished" sid="611867125446791" type="Player">
                                                     <param id="0" name="Animation">&quot;Attack01&quot;</param>
@@ -80,9 +82,10 @@
                                                 </action>
                                             </actions>
                                             <sub-events>
-                                                <event-block sid="590858891760697">
+                                                <event-block disabled="1" sid="590858891760697">
                                                     <conditions>
                                                         <condition behavior="Platform" id="0" name="Is moving" sid="404811856542798" type="Player" />
+                                                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="234875612415120" type="Player" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="4" name="Set animation" sid="825088552838967" type="Player">
@@ -91,9 +94,10 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="802936077310003">
+                                                <event-block disabled="1" sid="802936077310003">
                                                     <conditions>
                                                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="830521717909525" type="Player" />
+                                                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="900086685982754" type="Player" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="4" name="Set animation" sid="645802839419464" type="Player">
@@ -102,7 +106,7 @@
                                                         </action>
                                                     </actions>
                                                 </event-block>
-                                                <event-block sid="530836101074501">
+                                                <event-block disabled="1" sid="530836101074501">
                                                     <conditions>
                                                         <condition behavior="Platform" id="4" name="Is falling" sid="113228879920929" type="Player" />
                                                     </conditions>
@@ -117,9 +121,9 @@
                                         </event-block>
                                     </sub-events>
                                 </event-group>
-                                <event-group description="" sid="600707046637944" title="Movements">
+                                <event-group description="" disabled="1" sid="600707046637944" title="Movements">
                                     <sub-events>
-                                        <event-block sid="466047146186948">
+                                        <event-block disabled="1" sid="466047146186948">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="194294018411998" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -137,7 +141,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="972816952239047">
+                                        <event-block disabled="1" sid="972816952239047">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="162808715720450" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -160,7 +164,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="470334810811593">
+                                        <event-block disabled="1" sid="470334810811593">
                                             <conditions>
                                                 <condition id="6" name="On button pressed" sid="581760641957969" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -186,7 +190,7 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="810190743984501">
+                                        <event-block disabled="1" sid="810190743984501">
                                             <conditions>
                                                 <condition id="5" name="Compare axis" sid="472399385736927" type="Gamepad">
                                                     <param id="0" name="Gamepad">0</param>
@@ -210,7 +214,7 @@
                                             </actions>
                                         </event-block>
                                         <comment>If the player falls off the bottom of the layout, restart the level.</comment>
-                                        <event-block sid="524708382447388">
+                                        <event-block disabled="1" sid="524708382447388">
                                             <conditions>
                                                 <condition id="-2" name="Compare Y" sid="478267084838042" type="Player">
                                                     <param id="0" name="Comparison">4</param>
@@ -258,13 +262,58 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="288141424979392">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="528465728448381" type="Player">
+                                                    <param id="0" name="Instance variable">isAttacking</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="516401995832258">
+                                                    <conditions>
+                                                        <condition id="7" inverted="1" name="Is mirrored" sid="621505796003045" type="Player" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="8" name="Set vector X" sid="103582108529767" type="Player">
+                                                            <param id="0" name="Vector X">attackVectorX</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="632896568696212">
+                                                    <conditions>
+                                                        <condition id="7" name="Is mirrored" sid="320224117362620" type="Player" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Platform" id="8" name="Set vector X" sid="379129230868536" type="Player">
+                                                            <param id="0" name="Vector X">-attackVectorX</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="101857491584309">
+                                                    <conditions>
+                                                        <condition id="0" name="On key pressed" sid="964011229759610" type="Keyboard">
+                                                            <param id="0" name="Key">76 (L)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="503205827841767" type="Player">
+                                                            <param id="0" name="Animation">&quot;Attack02&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
                                         <event-block any="1" sid="948116989263901">
                                             <conditions>
                                                 <condition id="4" name="On finished" sid="721286138119325" type="Player">
                                                     <param id="0" name="Animation">&quot;Attack01&quot;</param>
                                                 </condition>
-                                                <condition id="4" name="On finished" sid="736443840363138" type="Player">
-                                                    <param id="0" name="Animation">&quot;AirAttack01&quot;</param>
+                                                <condition id="4" name="On finished" sid="399660984280443" type="Player">
+                                                    <param id="0" name="Animation">&quot;Attack02&quot;</param>
                                                 </condition>
                                             </conditions>
                                             <actions>
@@ -280,6 +329,7 @@
                                                 <event-block sid="938933561483808">
                                                     <conditions>
                                                         <condition behavior="Platform" id="0" name="Is moving" sid="824355712784391" type="Player" />
+                                                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="396345749897752" type="Player" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="4" name="Set animation" sid="563949208084631" type="Player">
@@ -291,21 +341,11 @@
                                                 <event-block sid="555285492408548">
                                                     <conditions>
                                                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="311018259233570" type="Player" />
+                                                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="622201356956900" type="Player" />
                                                     </conditions>
                                                     <actions>
                                                         <action id="4" name="Set animation" sid="594113308413409" type="Player">
                                                             <param id="0" name="Animation">&quot;Idle&quot;</param>
-                                                            <param id="1" name="From">1</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="118981417133138">
-                                                    <conditions>
-                                                        <condition behavior="Platform" id="4" name="Is falling" sid="936089413544415" type="Player" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="4" name="Set animation" sid="360311505892097" type="Player">
-                                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
                                                             <param id="1" name="From">1</param>
                                                         </action>
                                                     </actions>
@@ -335,6 +375,25 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="226196291264685">
+                                    <conditions>
+                                        <condition id="4" name="On finished" sid="821628082302240" type="Player">
+                                            <param id="0" name="Animation">&quot;AirAttack01&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="637707906200560" type="Player">
+                                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="430397755779494">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-group description="" sid="130093003700270" title="Movements2">
                                     <sub-events>

@@ -179,32 +179,32 @@
                 <animation framecount="4" loop="0" name="Crouch" pingpong="0" repeatcount="1" repeatto="0" sid="895040742636955" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-crouch-00.png">
                         <collision-poly>
-                            <point x="0.43" y="0.547297" />
-                            <point x="0.565" y="0.547297" />
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
                             <point x="0.595" y="0.959459" />
                             <point x="0.41" y="0.959459" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-crouch-01.png">
                         <collision-poly>
-                            <point x="0.43" y="0.547297" />
-                            <point x="0.565" y="0.547297" />
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
                             <point x="0.595" y="0.959459" />
                             <point x="0.41" y="0.959459" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-crouch-02.png">
                         <collision-poly>
-                            <point x="0.43" y="0.547297" />
-                            <point x="0.565" y="0.547297" />
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
                             <point x="0.595" y="0.959459" />
                             <point x="0.41" y="0.959459" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-crouch-03.png">
                         <collision-poly>
-                            <point x="0.43" y="0.547297" />
-                            <point x="0.565" y="0.547297" />
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
                             <point x="0.595" y="0.959459" />
                             <point x="0.41" y="0.959459" />
                         </collision-poly>
@@ -278,6 +278,56 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-air-attack1-03.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="6" loop="0" name="Attack02" pingpong="0" repeatcount="1" repeatto="0" sid="387436422174422" speed="25">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-00.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-01.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-02.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-03.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-04.png">
+                        <collision-poly>
+                            <point x="0.43" y="0.277027" />
+                            <point x="0.565" y="0.25" />
+                            <point x="0.595" y="0.959459" />
+                            <point x="0.41" y="0.959459" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="C:\Users\Quenix\Desktop\Game Creation\Assets\Individual Sprites\adventurer-attack2-05.png">
                         <collision-poly>
                             <point x="0.43" y="0.277027" />
                             <point x="0.565" y="0.25" />
